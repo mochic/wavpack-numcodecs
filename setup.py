@@ -30,8 +30,8 @@ def get_build_extensions():
     if platform.system() == "Linux":
         libraries = ["wavpack"]
         if shutil.which("wavpack") is not None:
-            out = check_output(["wavpack", "--version"])
-            print(f"WavPack is installed!\n{out.decode()}")
+            # out = check_output(["wavpack", "--version"])
+            # print(f"WavPack is installed!\n{out.decode()}")
             extra_link_args = ["-L/usr/local/lib/", "-L/usr/bin/"]
             runtime_library_dirs = ["/usr/local/lib/", "/usr/bin/"]
         else:
